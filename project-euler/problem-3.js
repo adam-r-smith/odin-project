@@ -8,7 +8,9 @@ var n = 600851475143;
 
 var f = 2;
 
-// we have tried all previous factors already so if f*f is greater than n we are done and n is prime
+// we have tried all previous factors already so a new set of factors for n can only be
+// two numbers >= f. so, if f*f is greater than n there are no factors left,
+// which also means n is prime
 while(f*f <= n)
 {
 	if(n % f === 0)
@@ -22,8 +24,6 @@ while(f*f <= n)
 		// f is not a factor, so try the next one
 		f = f + 1;
 	}
-	
-	
 }
 
 console.log(n);
